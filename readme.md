@@ -1,13 +1,2 @@
-# Projeto - Calculadora de médias e conceitos
-## Capacidade
-Desenvolver interfaces web interativas com linguagem de programação
-
-## Conheciemntos em JavaScript
-- Criar Variáveis
-- Criar funções
-- Arrow function
-- Funções anônimas
-- callBack
-- Manipular elementos do DOM
-- Adicionar e remover classes CSS
-- Ternário
+# Aulas front-end SENAI JANDIRA
+Aulas realizadas no curso Técnico de Desenvolvimento de Sistemas no SENAI de jandira no ano de 2019, na disciplina de programação WEB front-end ministrada pelo professor Fernando Leonid.

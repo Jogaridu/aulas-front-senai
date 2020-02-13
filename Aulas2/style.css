@@ -1,0 +1,60 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    display: flex;
+    /* vw ou vh é igual a portentagem */
+    width: 100vw;
+    height: 10vh;
+
+    background-color: #0336ff;
+    color: #FFFFFF;
+    /* Horizontal alinhamento */
+    justify-content: center; 
+
+    /* Vertical alinhamento */
+    align-items: center;
+}
+
+main {
+    width: 85vw;
+    height: 60vh;
+    background-color: #CEE8CD;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    margin: 5vh auto;
+    padding: 5vw;
+    box-sizing: border-box;
+}
+
+main label {
+    color: gray;
+}
+
+main input {
+    border: none;
+    border-bottom: 1px solid black;
+    /* Tira as bordas quando clicamos */
+    outline: none;
+    background-color: #CEE8CD;
+    font-size: 4vh;
+}
+
+main button {
+    font-size: 4vh;
+    padding: 1vh;
+}
+
+footer {
+    width: 85vw;
+    height: 15vh;
+    background-color: #CEE8CD;
+    margin: auto;
+    padding: 3vh;
+    box-sizing: border-box;
+}
