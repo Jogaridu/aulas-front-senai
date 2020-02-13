@@ -28,7 +28,10 @@ console.log(++nota2);
 
 nota += 1;
 */
-
+const $calcular = window.document.getElementById("calcular");
+const $exibir = window.document.getElementById("exibir");
+const $ocultar = window.document.getElementById("ocultar");
+const $container = window.document.getElementById("container");
 
 function chama() {
     
@@ -39,6 +42,8 @@ function chama() {
     const $media = window.document.getElementById("media");
     const $situacao = window.document.getElementById("situacao");
     const $conceito = window.document.getElementById("conceito");
+
+    
 
     $situacao.style.textAlign = "center";
     $situacao.style.color = "white";
@@ -95,3 +100,10 @@ const verificaSituacao = (media, css) => {
         
     }
 }
+
+
+const exibir = (el) => el.classList.add ("exibir");
+const ocultar = (el) => el.classList.remove ("exibir");
+
+$exibir.addEventListener('click', () => exibir($container));
+$ocultar.addEventListener('click', () => ocultar($container));
