@@ -1,0 +1,15 @@
+#resultado {
+    display: flex;
+    
+}
+
+.card {
+    margin: 5px;
+    border: 1px dashed black;
+    padding: 10px;
+}
+
+.titulo {
+    background-color: grey;
+    padding: 10px;
+}
