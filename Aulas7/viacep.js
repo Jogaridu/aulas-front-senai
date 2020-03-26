@@ -4,7 +4,7 @@ const verificarCep = () => {
     return document.getElementById("cep").reportValidity();
 }
 
-const encontrarCep = (cep) => {
+const encontrarCep = async (cep) => {
 
     if (verificarCep()) {
         const url = `https://viacep.com.br/ws/${cep}/json/`
@@ -14,17 +14,23 @@ const encontrarCep = (cep) => {
         // 3° Terceiro transforma a resposta (res) em um JSON
         // 4° Quarto usa o método then() novamente para pegar os dados do JSON
 
-        fetch(url).then( (res) => res.json().then((dados) => preencherFormulario(dados)),
-                         () => window.alert("CEP Inválido"));
+        // Método sem o async e o await
+        // fetch(url).then( (res) => res.json().then((dados) => preencherFormulario(dados)),
+        //                  () => window.alert("CEP Inválido"));
 
         document.getElementById("endereco").value = "Pesquisando CEP..."
+
+        // Método com o async e o await
+        const pegarEndereco = await fetch(url);
+        const endereco = await pegarEndereco.json()
+        preencherFormulario(endereco)
+        
     }
     
 }
 
 const preencherFormulario = (endereco) => {
     if (endereco.erro) {
-        alert("passo3")
         document.getElementById("endereco").value = "";
         document.getElementById("bairro").value = "";
         document.getElementById("cidade").value = "";

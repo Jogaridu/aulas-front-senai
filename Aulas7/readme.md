@@ -5,5 +5,9 @@ Utilizar uma API para buscar dados em uma outra URL
 
 ## Conhecimentos em JavaScript
 - API Fetch
+- Promisses
 - Métodos como then() e json()
-- Evento do JavaScript "blur"
+- Eventos do JavaScript "blur", "keyup"
+- Validar entrada de dados
+- Máscaras para entrada de dados
+- Async e Await
