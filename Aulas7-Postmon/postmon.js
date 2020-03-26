@@ -8,6 +8,7 @@ const encontrarCep = async (cep) => {
 
     if (verificarCep()) {
         const url = `https://api.postmon.com.br/v1/cep/${cep}`
+        
 
         // 1° Primeiro usamos a API FETCH e passa como parâmetro uma URL
         // 2° Segundo usa o método then(callback) para mostrar o resultado da URL
@@ -18,30 +19,32 @@ const encontrarCep = async (cep) => {
         // fetch(url).then( (res) => res.json().then((dados) => preencherFormulario(dados)),
         //                  () => window.alert("CEP Inválido"));
 
-        document.getElementById("endereco").value = "Pesquisando CEP..."
+        
 
         // Método com o async e o await
-        const pegarEndereco = await fetch(url);
-        const endereco = await pegarEndereco.json()
-        preencherFormulario(endereco)
-        
+        try {
+            const pegarEndereco = await fetch(url);
+            const endereco = await pegarEndereco.json();
+            
+            document.getElementById("endereco").value = "Pesquisando CEP..."
+
+            preencherFormulario(endereco);
+
+        } catch {
+            alert("cep invalido");
+        }
+          
     }
     
 }
 
 const preencherFormulario = (endereco) => {
-    if (endereco.erro) {
-        document.getElementById("endereco").value = "";
-        document.getElementById("bairro").value = "";
-        document.getElementById("cidade").value = "";
-        document.getElementById("estado").value = "";
-
-    } else {
-        document.getElementById("endereco").value = endereco.logradouro;
-        document.getElementById("bairro").value = endereco.bairro;
-        document.getElementById("cidade").value = endereco.localidade;
-        document.getElementById("estado").value = endereco.uf;
-    }
+    
+    document.getElementById("endereco").value = endereco.logradouro;
+    document.getElementById("bairro").value = endereco.bairro;
+    document.getElementById("cidade").value = endereco.cidade;
+    document.getElementById("estado").value = endereco.estado;
+    
 }
 
 const maskCep = ($el) => {
