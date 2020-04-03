@@ -1,0 +1,2 @@
+# Exercicio para indicar o número de casos e mortes no Mundo devido ao COVID-19.
+Exercício para colocar em prática os conhecimentos adquiridos na aula 8, no qual foi exigida uma nova API e uma nova imagem SVG
