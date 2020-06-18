@@ -1,0 +1,78 @@
+body {
+    background-color: dodgerblue;
+}
+
+h1 {
+    font-family: "comic sans ms";
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    margin: 30px auto;
+}
+
+#container {
+    height: 500px;
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: white;
+
+    padding-top: 80px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    
+}
+
+#caixaBotoes {
+    height: 40px;
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+input[type=text] {
+    height: 30px;
+    width: 190px;
+    border-radius: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+input[type=button] {
+    height: 40px;
+    width: 80px;
+    background-color: dodgerblue;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black;
+    float: left;
+    margin-right: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    border: none;
+}
+
+input[type=button]:active {
+    background-color: rgb(21, 85, 148);
+    
+}
+
+#listaNomes {
+    height: 200px;
+    width: 100%;
+}
+
+#listaNomes li {
+    height: 25px;
+    width: 100%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+}
